@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
     <tr>
         <td>
             <a routerLink="publicPage"> [PublicPage]</a>
@@ -15,6 +15,27 @@
 </div>
 <div *ngIf="!isLoggedIn()">
     <h3>You are NOT logged in</h3>
+</div> -->
+
+<div class="container h-100">
+    <div class="row align-items-center justify-content-center h-100">
+        <div class="card" style="width: 22rem;">
+            <div class="card-body ">
+                <h4 class="card-title d-flex justify-content-center ">Iniciar sesión</h4>
+                <div class="input-group mb-2 ">
+                    <input type="text " class="form-control " placeholder="Correo electrónico ">
+                </div>
+                <div class="input-group mb-2 ">
+                    <input type="text " class="form-control " placeholder="Contraseña ">
+                </div>
+                <!--Iniciar sesión con microsoft-->
+                <div>
+                    <button type="button " class=" btn btn-block btn-secondary ">Iniciar sesión con windows<i class="fa fa-windows pl-3 " style="font-size: 18px; "></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 <router-outlet></router-outlet>

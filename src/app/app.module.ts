@@ -5,9 +5,12 @@ import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-b
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PublicPageComponent } from './public-page/public-page.component';
-import { RestrictedPageComponent } from './restricted-page/restricted-page.component';
+import { PublicPageComponent } from './components/public-page/public-page.component';
+import { RestrictedPageComponent } from './components/restricted-page/restricted-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthModule } from './auth/auth.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
@@ -21,13 +24,15 @@ export function MSALInstanceFactory(): IPublicClientApplication {
   declarations: [
     AppComponent,
     PublicPageComponent,
-    RestrictedPageComponent
+    RestrictedPageComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MsalModule,
-    NgbModule
+    NgbModule,
+    AuthModule
   ],
   providers: [
     {
