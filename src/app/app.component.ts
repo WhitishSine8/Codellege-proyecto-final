@@ -8,18 +8,17 @@ import { MsalService } from '@azure/msal-angular';
 })
 export class AppComponent implements OnInit {
   title = 'Codellege-proyecto-final';
-
   constructor(private msalService: MsalService) {
     //msalService.instance.getActiveAccount
   }
   ngOnInit(): void {
-      this.msalService.instance.handleRedirectPromise().then(
-        res => {
-          if(res != null && res.account != null) {
-            this.msalService.instance.setActiveAccount(res.account)
-          }
+    this.msalService.instance.handleRedirectPromise().then(
+      res => {
+        if(res != null && res.account != null) {
+          this.msalService.instance.setActiveAccount(res.account)
         }
-      )
+      }
+    )
   }
 
   login() {

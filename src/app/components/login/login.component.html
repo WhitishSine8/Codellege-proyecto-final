@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup]="miFormulario">
+        Usuario: <input type="text" class="form-control" formControlName="usuario">
+        <!-- <div class="alert alert-danger">
+            <div class="container-error-message">
+                Se requiere un nombre
+            </div>
+        </div> -->
+
+        Contraseña: <input type="password" class="form-control" formControlName="contraseña">
+        <br>
+        <button class="btn btn-success" type="submit">Iniciar sesión</button>
+    </form>
+</div>

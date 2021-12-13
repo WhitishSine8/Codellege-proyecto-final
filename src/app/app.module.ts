@@ -5,11 +5,13 @@ import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-b
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PublicPageComponent } from './components/public-page/public-page.component';
-import { RestrictedPageComponent } from './components/restricted-page/restricted-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AuthModule } from './auth/auth.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { FotosComponent } from './components/fotos/fotos.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -23,16 +25,18 @@ export function MSALInstanceFactory(): IPublicClientApplication {
 @NgModule({
   declarations: [
     AppComponent,
-    PublicPageComponent,
-    RestrictedPageComponent,
     NavbarComponent,
+    LoginComponent,
+    AlbumsComponent,
+    FotosComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MsalModule,
     NgbModule,
-    AuthModule
+    ReactiveFormsModule
   ],
   providers: [
     {
