@@ -1,14 +1,32 @@
-<div class="container">
-    <form [formGroup]="miFormulario">
-        Usuario: <input type="text" class="form-control" formControlName="usuario">
-        <!-- <div class="alert alert-danger">
-            <div class="container-error-message">
-                Se requiere un nombre
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 col-md-4 ladoIzq" style="height: 970px">
+            <div class="row align-items-center justify-content-center" style="height: 300px;">
+                <i class="fa fa-landmark" style="font-size: 130px; color: rgb(23, 162, 184);"></i>
             </div>
-        </div> -->
+            <h2 class="pt-5">Bienvenido</h2>
+            <hr>
 
-        Contraseña: <input type="password" class="form-control" formControlName="contraseña">
-        <br>
-        <button class="btn btn-success" type="submit">Iniciar sesión</button>
-    </form>
+            <!-- <form [formGroup]="miFormulario"> -->
+            <form>
+                Usuario: <input [formControl]="usuario" type="text" class="form-control">
+                <br>
+
+                <!-- <div class="alert alert-danger">
+                    <div class="container-error-message">
+                        Se requiere un nombre
+                    </div>
+                </div> -->
+
+                Contraseña: <input [formControl]="password" type="password" class="form-control">
+                <br>
+                <button (click)="logIn()" class="btn btn-info" type="submit">Iniciar sesión</button>
+            </form>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-8 ladoDerecho">
+        </div>
+    </div>
 </div>
+
+<router-outlet></router-outlet>

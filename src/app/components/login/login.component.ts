@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router, RouterModule } from "@angular/router";
+import { Router, RouterModule, NavigationExtras, RouterLink } from "@angular/router";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
+export class LoginComponent {
 
   constructor(private router: Router) { }
 
@@ -15,16 +17,22 @@ export class LoginComponent{
     contraseña: new FormControl("12345", Validators.required)
   })
 
-  Login() {
-    const usuarioLogin = {
-      usuario: this.miFormulario.value.usuario,
-      password: this.miFormulario.value.password,
-    };
-    if (usuarioLogin.usuario = 'Admin' && usuarioLogin.password === '12345') {
-      this.router.navigate(['/home']);
+  usuario = new FormControl();
+  password = new FormControl();
+
+  logIn() {
+    // const usuarioLogin = {
+    //   usuario: this.miFormulario.value.usuario,
+    //   password: this.miFormulario.value.password,
+    // };
+    console.log(this.usuario.value);
+    console.log(this.usuario.value)
+    if (this.usuario.value == 'admin' && this.password.value === '123') {
+      this.router.navigate(['/home'], );
+      // this.router.navigateByUrl('../home')
     }
     else {
-		//Tenes que poner un mensaje de error 
+      alert("Nombre de usuario o contraseña incorrectos")
     }
   }
 }
