@@ -6,17 +6,24 @@
     <small><strong>Website: </strong>{{ user.website }}</small><br>
 </div> -->
 
-<div *ngFor="let user of users">
-    <br>
-    <div class="card">
-        <div class="card-header">
-            <h3>{{ user.username}}</h3>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container-fluid">
+    <div class="justify-content-center row">
+        <div class="pl-3 pt-5" *ngFor="let user of users">
+            <br>
+            <div class="card border-dark" style="width: 20rem; height: 20rem;">
+                <div class="card-header">
+                    <h5 class="card-title text-primary">Usuario: {{ user.username }}</h5>
+                </div>
+                <div class=" card-body ">
+                    <p><strong class=" ">Name: </strong>{{user.name}}</p>
+                    <p><strong>Email: </strong>{{ user.email }}</p>
+                    <p><strong>Phone: </strong>{{ user.phone }}</p>
+                    <div class="card-footer bg-transparent border-primary">
+                        <p><i>"{{ user.company.catchPhrase }}"</i></p>
+                    </div>
+                </div>
+            </div>
+            <br>
         </div>
     </div>
-    <br>
 </div>

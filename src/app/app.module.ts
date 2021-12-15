@@ -17,6 +17,7 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { HomeComponent } from './components/home/home.component';
 import { UsuarioService } from './services/usuarios.service';
+import { PostsService } from './services/posts.service';
 
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -52,7 +53,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
       useFactory: MSALInstanceFactory
     },
     MsalService,
-    UsuarioService
+    UsuarioService,
+    PostsService
   ],
   bootstrap: [AppComponent]
 })
