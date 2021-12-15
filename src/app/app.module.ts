@@ -5,6 +5,7 @@ import { MsalModule, MsalService, MSAL_INSTANCE } from '@azure/msal-angular';
 import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //Componentes internos
 import { AlbumsComponent } from './components/albums/albums.component';
@@ -15,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -26,6 +28,14 @@ export function MSALInstanceFactory(): IPublicClientApplication {
   })
 }
 @NgModule({
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MsalModule,
+    NgbModule,
+    ReactiveFormsModule
+  ],
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -33,17 +43,10 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     FotosComponent,
     UsuariosComponent,
     HomeComponent,
-    LoginComponent  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MsalModule,
-    NgbModule,
-    ReactiveFormsModule
+    LoginComponent,
+    PostsComponent
   ],
-  exports: [
-    
-  ],
+  
   providers: [
     {
       provide: MSAL_INSTANCE,

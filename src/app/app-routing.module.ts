@@ -9,6 +9,7 @@ import { AlbumsComponent } from './components/albums/albums.component';
 import { FotosComponent } from './components/fotos/fotos.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { HomeComponent } from './components/home/home.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 const routes: Routes = [
   // { path: "**", component: PublicPageComponent }
@@ -17,11 +18,16 @@ const routes: Routes = [
   { path: "fotos", component: FotosComponent},
   { path: "usuarios", component: UsuariosComponent},
   { path: "home", component: HomeComponent},
-  // { path: "login", redirectTo: "home", pathMatch: "full"}
+  { path: "publicaciones", component: PostsComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'login' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }
