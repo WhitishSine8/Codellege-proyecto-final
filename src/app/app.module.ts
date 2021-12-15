@@ -11,12 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlbumsComponent } from './components/albums/albums.component';
 import { FotosComponent } from './components/fotos/fotos.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
-import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -42,9 +41,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     AlbumsComponent,
     FotosComponent,
     UsuariosComponent,
-    HomeComponent,
-    LoginComponent,
-    PostsComponent
+    PostsComponent,
+    HomeComponent
   ],
   
   providers: [
