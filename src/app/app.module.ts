@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { HomeComponent } from './components/home/home.component';
+import { UsuarioService } from './services/usuarios.service';
 
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -50,7 +51,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
       provide: MSAL_INSTANCE,
       useFactory: MSALInstanceFactory
     },
-    MsalService
+    MsalService,
+    UsuarioService
   ],
   bootstrap: [AppComponent]
 })
