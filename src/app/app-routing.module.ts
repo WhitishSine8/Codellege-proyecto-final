@@ -8,6 +8,8 @@ import { FotosComponent } from './components/fotos/fotos.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { HomeComponent } from './components/home/home.component'
+import { CommentComponent } from './components/comentarios/comentarios.componente';
+import { UsuarioComponent } from './components/usuarios/usuario/usuario.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: "fotos", component: FotosComponent},
   { path: "usuarios", component: UsuariosComponent},
   { path: "publicaciones", component: PostsComponent},
-  { path: '', pathMatch: 'full', redirectTo: 'publicaciones' }
+  { path: '', pathMatch: 'full', redirectTo: 'publicaciones' },
+  { path: "comentarios", component: CommentComponent},
+  { path: "usuario", component: UsuarioComponent}
 ];
 
 @NgModule({

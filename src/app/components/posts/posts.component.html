@@ -1,9 +1,11 @@
 <app-navbar></app-navbar>
-<p>posts jala</p>
-<!-- <div class="card m-3" *ngFor="let post of posts">
-    <div class="card-body">
-        <h4 class="card-title">{{ post.title | uppercase}}</h4>
-        <small> <strong>Name: </strong> {{ post.name }}</small>
-        <p>{{ post.body }}</p>
-    </div>
-</div> -->
+
+<div class="jumbotron" *ngFor="let post of posts">
+    <h5 class="display-5">{{post.title | uppercase}}</h5>
+    <small> <strong>Name:
+        </strong> <a class="active" routerLink="/usuarios">{{ post.name }}</a></small>
+    <p>{{ post.body }}</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" role="button">Learn more</a>
+    </p>
+</div>

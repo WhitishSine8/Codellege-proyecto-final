@@ -12,7 +12,11 @@
             <br>
             <div class="card border-dark" style="width: 20rem; height: 20rem;">
                 <div class="card-header">
-                    <h5 class="card-title text-primary">Usuario: {{ user.username }}</h5>
+                    <h5 class="card-title text-primary">
+                        <p>Usuario:
+                            <a class="active" routerLink="/usuario"> {{ user.username }}</a>
+                        </p>
+                    </h5>
                 </div>
                 <div class=" card-body ">
                     <p><strong class=" ">Name: </strong>{{user.name}}</p>

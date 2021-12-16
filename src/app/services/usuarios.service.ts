@@ -25,5 +25,4 @@ export class UsuarioService {
   getUser(id: number): Observable<UsuarioModel> {
     return this.http.get<UsuarioModel>(`${this.usersUrl}/${id}`)
   }
-
 }

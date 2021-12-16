@@ -1,4 +1,4 @@
-//Componentes externos
+//Módulos
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MsalModule, MsalService, MSAL_INSTANCE } from '@azure/msal-angular';
@@ -16,8 +16,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { HomeComponent } from './components/home/home.component';
+
+//Servicios
 import { UsuarioService } from './services/usuarios.service';
 import { PostsService } from './services/posts.service';
+import { ComentariosService } from './services/comentarios.service';
+import { UsuarioComponent } from './components/usuarios/usuario/usuario.component';
 
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -43,8 +47,10 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     AlbumsComponent,
     FotosComponent,
     UsuariosComponent,
+    UsuarioComponent,
     PostsComponent,
-    HomeComponent
+    HomeComponent,
+    UsuarioComponent
   ],
   
   providers: [
@@ -54,7 +60,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     },
     MsalService,
     UsuarioService,
-    PostsService
+    PostsService,
+    ComentariosService
   ],
   bootstrap: [AppComponent]
 })

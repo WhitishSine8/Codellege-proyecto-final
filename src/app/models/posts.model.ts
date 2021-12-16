@@ -1,7 +1,7 @@
 export class PostsModel {
     userId: number;
-    id: number;
+    id: string;
     name?: string;
     title: string;
     body: string;
-  }
+}

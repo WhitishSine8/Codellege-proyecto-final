@@ -12,21 +12,20 @@ const httpOptions = {
 
 @Injectable()
 export class PostsService {
-  private postsUrl: string ='https://jsonplaceholder.typicode.com/posts';
+  private _postsUrl: string ='https://jsonplaceholder.typicode.com/posts';
   constructor(
     private http: HttpClient,
   ) { }
 
   getPost(id: number): Observable<PostsModel> {
-    return this.http.get<PostsModel>(`${this.postsUrl}/${id}`)
+    return this.http.get<PostsModel>(`${this._postsUrl}/${id}`)
   }
 
   getPosts(): Observable<PostsModel[]> {
-    return this.http.get<PostsModel[]>(`${this.postsUrl}?_sort=views&_order=desc`)
+    return this.http.get<PostsModel[]>(`${this._postsUrl}?_sort=views&_order=desc`)
   }
 
   addPost(post: PostsModel): Observable<PostsModel> {
-    return this.http.post<PostsModel>(this.postsUrl, post, httpOptions) 
+    return this.http.post<PostsModel>(this._postsUrl, post, httpOptions) 
   }
-
 }
