@@ -1,2 +1,67 @@
 <app-navbar></app-navbar>
-<p>fotos works!</p>
+<!-- <div class="container-fluid">
+    <div class="justify-content-center row">
+        <div class="pl-3 pt-5" *ngFor="let foto of fotos">
+            <br>
+            <div class="card border-dark" style="width: 20rem; height: 20rem;">
+                <div class="card-header">
+                    <h5 class="card-title text-primary">
+                        <p>Usuario:
+                            <a class="active" routerLink="/usuario"> {{ foto.id }}</a>
+                        </p>
+                    </h5>
+                </div>
+                <div class=" card-body ">
+                    <p><strong class=" ">Name: </strong>{{user.name}}</p>
+                    <p><strong>Email: </strong>{{ user.email }}</p>
+                    <p><strong>Phone: </strong>{{ user.phone }}</p>
+                    <div class="card-footer bg-transparent border-primary">
+                        <p><i>"{{ user.company.catchPhrase }}"</i></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="pl-3 pt-5" *ngFor="let foto of fotos | slice:0:10; let i = index">
+            <div class="card border-dark" style="width: 18rem; height: 20rem;">
+                <img class="" src={{foto.thumbnailUrl}} alt="">
+                <div class="card-body">
+                    <div class="card-footer bg-transparent border-dark">{{foto.title}}</div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="pl-3 pt-5" *ngFor="let foto of fotos | slice:0:18; let i = index">
+            <div class="card border-dark" style="width: 18rem; height: 20rem;">
+                <img class="" src={{foto.thumbnailUrl}} alt="">
+                <div class="card-body">
+                    <div class="card-footer bg-transparent border-dark">{{foto.title}}</div>
+                    <div *ngFor="let persona of usuarios">
+                        <div class="card-footer">{{persona.name}}</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div> -->

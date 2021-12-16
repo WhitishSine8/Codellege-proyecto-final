@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 
-// Model
+// Modelos
 import { UsuarioModel } from 'src/app/models/usuarios.model';
 import { PostsModel } from 'src/app/models/posts.model';
 
-// Service
+// Servicios
 import { PostsService } from '../../services/posts.service';
 import { UsuarioService } from 'src/app/services/usuarios.service';
 

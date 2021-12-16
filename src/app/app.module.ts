@@ -22,6 +22,7 @@ import { UsuarioService } from './services/usuarios.service';
 import { PostsService } from './services/posts.service';
 import { ComentariosService } from './services/comentarios.service';
 import { UsuarioComponent } from './components/usuarios/usuario/usuario.component';
+import { FotosService } from './services/fotos.service';
 
 
 export function MSALInstanceFactory(): IPublicClientApplication {
@@ -61,7 +62,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     MsalService,
     UsuarioService,
     PostsService,
-    ComentariosService
+    ComentariosService,
+    FotosService
   ],
   bootstrap: [AppComponent]
 })
